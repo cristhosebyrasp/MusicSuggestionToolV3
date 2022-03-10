@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import sqlite3
 
-#----------Databases---------|
+
 con = sqlite3.connect('userdata.db')
 cur = con.cursor()
 cur.execute('''CREATE TABLE IF NOT EXISTS record(
@@ -15,31 +15,29 @@ cur.execute('''CREATE TABLE IF NOT EXISTS record(
                 )
             ''')
 con.commit()
-
-#----------MainFrame---------|
-ws=()
+            
 if __name__ == "__main__":
     ws = Tk()
     ws.title('Registration')
     ws.geometry('940x565')
-    ws.config(bg='#92d050')
+    ws.config(bg='#0bd67b')
     
 f = ("Calibri", 14)
 
 def nextPage():
     ws.destroy()
-    import page2
+    import NEA_Navigation_Program_2
 
 def prevPage():
     ws.destroy()
-    import page1
+    import NEA_Navigation_Program_1
     
 Label(
     ws,
     font = f,
     padx=250,
     pady=250,
-    bg='#92d050'
+    bg='#0bd67b'
     ).pack(expand=False, fill=X)
 
 Button(
@@ -168,7 +166,7 @@ variable.set(countries[1])
 left_frame = Frame(
     ws, 
     bd=2, 
-    bg='#000000',   
+    bg='#CCCCCC',   
     relief=SOLID, 
     padx=10, 
     pady=10
@@ -177,70 +175,16 @@ left_frame = Frame(
 Label(
     left_frame, 
     text="Enter Email", 
-    bg='#000000',
-    fg='#FFFFFF',
+    bg='#CCCCCC',
     font=f).grid(row=0, column=0, sticky=W, pady=10)
 
 Label(
     left_frame, 
     text="Enter Password", 
-    bg='#000000',
-    fg='#FFFFFF',
+    bg='#CCCCCC',
     font=f
     ).grid(row=1, column=0, pady=10)
-#------------------|Addition 
-Label(
-    left_frame, 
-    text="Enter Password", 
-    bg='#000000',
-    fg='#FFFFFF',
-    font=f
-    ).grid(row=2, column=0, pady=10)
 
-Label(
-    left_frame, 
-    text="", 
-    bg='#000000',
-    fg='#FFFFFF',
-    font=f
-    ).grid(row=3, column=0, pady=10)
-Label(
-    left_frame, 
-    text="", 
-    bg='#000000',
-    fg='#FFFFFF',
-    font=f
-    ).grid(row=4, column=0, pady=10)
-Label(
-    left_frame, 
-    text="", 
-    bg='#000000',
-    fg='#FFFFFF',
-    font=f
-    ).grid(row=5, column=0, pady=10)
-Label(
-    left_frame, 
-    text="", 
-    bg='#000000',
-    fg='#FFFFFF',
-    font=f
-    ).grid(row=6, column=0, pady=10)
-Label(
-    left_frame, 
-    text="", 
-    bg='#000000',
-    fg='#FFFFFF',
-    font=f
-    ).grid(row=7, column=0, pady=10)
-Label(
-    left_frame, 
-    text="", 
-    bg='#000000',
-    fg='#FFFFFF',
-    font=f
-    ).grid(row=8, column=0, pady=10)
-
-#------------------|End of the addition
 email_tf = Entry(
     left_frame, 
     font=f
@@ -263,8 +207,8 @@ login_btn = Button(
 right_frame = Frame(
     ws, 
     bd=2, 
-    bg="#92d050",
-    relief=FLAT, 
+    bg='#a1b5a3',
+    relief=SOLID, 
     padx=10, 
     pady=10
     )
@@ -272,55 +216,55 @@ right_frame = Frame(
 Label(
     right_frame, 
     text="Enter Name", 
-    bg="#92d050",
+    bg='#a1b5a3',
     font=f
     ).grid(row=0, column=0, sticky=W, pady=10)
 
 Label(
     right_frame, 
     text="Enter Email", 
-    bg="#92d050",
+    bg='#a1b5a3',
     font=f
     ).grid(row=1, column=0, sticky=W, pady=10)
 
 Label(
     right_frame, 
     text="Contact Number", 
-    bg="#92d050",
+    bg='#a1b5a3',
     font=f
     ).grid(row=2, column=0, sticky=W, pady=10)
 
 Label(
     right_frame, 
     text="Select Gender", 
-    bg="#92d050",
+    bg='#a1b5a3',
     font=f
     ).grid(row=3, column=0, sticky=W, pady=10)
 
 Label(
     right_frame, 
     text="Select Country", 
-    bg="#92d050",
+    bg='#a1b5a3',
     font=f
     ).grid(row=4, column=0, sticky=W, pady=10)
 
 Label(
     right_frame, 
     text="Enter Password", 
-    bg="#92d050",
+    bg='#a1b5a3',
     font=f
     ).grid(row=5, column=0, sticky=W, pady=10)
 
 Label(
     right_frame, 
     text="Re-Enter Password", 
-    bg="#92d050",
+    bg='#a1b5a3',
     font=f
     ).grid(row=6, column=0, sticky=W, pady=10)
 
 gender_frame = LabelFrame(
     right_frame,
-    bg="#92d050",
+    bg='#a1b5a3',
     padx=10, 
     pady=10,
     )
